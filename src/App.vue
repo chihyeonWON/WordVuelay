@@ -1,6 +1,6 @@
 <template>
   <div id="root">
-    <form>
+    <form v-on:submit="onSubmitForm">
       <input type="text" v-model="inputValue">
       <button type="submit">입력</button>
     </form>
@@ -18,7 +18,9 @@ export default {
     }
   },
   methods:{
-
+    onSubmitForm(e){
+      e.prventDefault();
+    }
   },
 }
 </script>
