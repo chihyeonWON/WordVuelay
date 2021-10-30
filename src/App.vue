@@ -6,7 +6,7 @@
       <button type="submit">입력</button>
     </form>
   </div>
-  <div id="result"> 
+  <div> 
     {{ result }}
   </div>
 </template>
@@ -23,9 +23,17 @@ export default {
   },
   methods:{
     onSubmitForm(e){
-      e.prventDefault();
+      e.preventDefault();
+      if(this.word[this.word.length - 1] === this.inputValue[0]) {
+        this.result = '정답';
+        this.word = this.inputValue;
+        this.inputValue = '';
+      } else {
+        this.result = '땡';
+        this.inputValue='';
+      }
     }
-  },
+  }
 }
 </script>
 
