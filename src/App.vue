@@ -2,7 +2,7 @@
   <div id="root">
     제시어 : {{ word }}
     <form v-on:submit="onSubmitForm">
-      <input type="text" v-model="inputValue">
+      <input type="text" v-model="inputValue" ref="answer">
       <button type="submit">입력</button>
     </form>
   </div>
@@ -28,6 +28,7 @@ export default {
         this.result = '정답';
         this.word = this.inputValue;
         this.inputValue = '';
+        this.$refs.answer.focus();
       } else {
         this.result = '땡';
         this.inputValue='';
