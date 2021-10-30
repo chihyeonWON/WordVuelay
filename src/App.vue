@@ -6,6 +6,9 @@
       <button type="submit">입력</button>
     </form>
   </div>
+  <div id="result"> 
+    {{ result }}
+  </div>
 </template>
 
 <script>
