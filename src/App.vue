@@ -12,7 +12,9 @@ export default {
   name: 'App',
   data(){
     return{
-
+      word:'끝말잇기',
+      inputValue:'',
+      result:'',
     }
   },
   methods:{
