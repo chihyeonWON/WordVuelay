@@ -1,5 +1,6 @@
 <template>
   <div id="root">
+    제시어 : {{ word }}
     <form v-on:submit="onSubmitForm">
       <input type="text" v-model="inputValue">
       <button type="submit">입력</button>
